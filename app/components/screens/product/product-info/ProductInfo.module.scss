@@ -1,0 +1,29 @@
+.info {
+	@apply ml-28 font-semibold text-xl w-96;
+	> h2 {
+		@apply text-3xl;
+	}
+	> h3 {
+		color: gray;
+		@apply mb-4 text-base ;
+	}
+	.price {
+		@apply mb-8;
+	}
+	.sizes {
+		@apply mb-8;
+		> h2 {
+			@apply mb-4;
+		}
+		> ul {
+			@apply grid gap-2 grid-cols-3;
+			> li {
+				@apply flex justify-center items-center text-xl h-12 border-2 border-[#e5e5e5] rounded cursor-pointer;
+				&:hover {
+					@apply border-main;
+				}
+			}
+		}
+	}
+	
+}

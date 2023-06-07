@@ -1,0 +1,49 @@
+.block {
+	z-index: 1;
+	@apply relative  w-[410px] h-[470px] rounded-3xl bg-white bg-contain;
+	background-image: url('../../../../public/bgcontacts.jpg');
+	background-position: center center;
+	box-shadow: inset 0px 0px 90px 90px rgba(92, 75, 119, 1),
+		12px 29px 81px 0px rgba(0, 0, 0, 0.2);
+
+	filter: brightness(50%);
+}
+.pic {
+	z-index: 2;
+	@apply absolute;
+	bottom: 3%;
+	right: 30px;
+
+	filter: brightness(95%);
+	animation-play-state: running;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+	animation-name: fly;
+}
+@keyframes fly {
+	33% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	70% {
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px);
+	}
+}
+.link {
+	z-index: 2;
+	@apply absolute flex bg-white  w-[271px] h-[70px] bottom-[1%] right-[5%] p-2 rounded-xl;
+	> div {
+		> div {
+			> h3 {
+				@apply font-extrabold text-lg;
+			}
+		}
+	}
+}

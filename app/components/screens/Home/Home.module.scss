@@ -1,0 +1,40 @@
+.title {
+	display: grid;
+	grid-template-columns: [first content-start] 300px [content-end sidebar-start] 700px [lastline];
+	grid-gap: 250px;
+
+	@apply pb-48;
+
+	.firstBlock {
+		@apply w-72 pt-32;
+	}
+	.secondBlock {
+		@apply relative;
+
+		> h2 {
+			@apply pt-32;
+			position: relative;
+			z-index: 4;
+		}
+		&::before {
+			content: '';
+			@apply absolute w-[75%] h-[120%] right-2  rounded-full z-0;
+			background: rgb(254, 170, 75);
+			background: linear-gradient(
+				207deg,
+				rgba(254, 170, 75, 1) 25%,
+				rgba(242, 126, 163, 1) 42%,
+				rgba(227, 159, 214, 1) 53%,
+				rgba(205, 198, 253, 1) 63%,
+				rgba(255, 255, 255, 1) 78%,
+				rgba(255, 255, 255, 1) 100%
+			);
+		}
+	}
+}
+.content {
+	
+	color: #281e31;
+	@apply  flex justify-center;
+
+}

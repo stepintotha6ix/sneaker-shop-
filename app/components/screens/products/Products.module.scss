@@ -1,0 +1,33 @@
+.content {
+	@apply w-[100%] rounded-3xl mb-24 relative;
+	background-color: #fff;
+	> div {
+		@apply flex  items-center p-12 justify-between  ;
+		.title {
+			@apply text-3xl font-semibold text-[#281E31];
+		}
+		.sort{
+			@apply absolute z-20 right-12 ;
+		}
+		
+		
+	}
+
+	.sneakersBlock {
+		@apply grid grid-cols-4  z-10 ;
+
+		.product {
+			@apply px-4 mb-8 z-auto;
+
+			.image {
+				@apply relative rounded-3xl mb-2;
+			}
+			.info {
+				@apply ml-2;
+				.name {
+					@apply text-xl font-semibold;
+				}
+			}
+		}
+	}
+}

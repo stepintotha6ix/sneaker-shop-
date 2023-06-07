@@ -1,0 +1,6 @@
+.button{
+    @apply uppercase bg-[#281E31] text-white px-7 py-2 rounded-xl transition-all;
+    &:hover{
+        @apply text-[#281E31] bg-gray-300 transition-all duration-200;
+    }
+}

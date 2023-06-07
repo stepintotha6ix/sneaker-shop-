@@ -1,0 +1,26 @@
+.block {
+	@apply w-[410px] h-[470px] rounded-3xl  bg-transparent mr-8;
+	box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.2);
+	border: 1px solid #281e31;
+	.subtitle {
+		@apply flex justify-between;
+		border-bottom: 1px solid #281e31;
+
+		> span {
+			@apply text-lg font-bold m-4 uppercase;
+		}
+		> img {
+			@apply mr-2;
+		}
+	}
+	.content {
+		@apply mt-16;
+
+		.numbers {
+			@apply text-4xl font-bold uppercase text-center mb-6;
+		}
+		.text {
+            @apply text-lg font-semibold mx-auto text-center w-2/3;
+		}
+	}
+}

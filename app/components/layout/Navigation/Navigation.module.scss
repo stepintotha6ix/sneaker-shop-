@@ -1,0 +1,13 @@
+.navigation {
+	
+	
+
+	@apply bg-white flex justify-between p-5 text-center text-base uppercase px-12 z-30;
+	.logo {
+		color: #281e31;
+		@apply flex items-center;
+		span {
+			@apply font-black ml-3 text-[25px];
+		}
+	}
+}

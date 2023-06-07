@@ -1,0 +1,24 @@
+.menu {
+	
+	.ul {
+		@apply flex;
+		li {
+			a {
+				transition-duration: 300ms;
+				@apply flex items-center mx-8 font-semibold mt-2 border-white border-opacity-0;
+				&:hover {
+					@apply border-b-2  border-main border-opacity-100;
+				}
+                
+			}
+            &.active {
+                @apply border-b-main;
+                margin-top: 10px;
+                
+            }
+			
+		}
+		
+	}
+	
+}

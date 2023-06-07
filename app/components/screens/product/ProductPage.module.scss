@@ -1,0 +1,11 @@
+.block{
+    @apply flex mt-12 pb-32;
+}
+.itemGallery{
+    @apply mt-2 rounded cursor-pointer;
+    
+}
+.active{
+    filter: brightness(90%)
+}
+
