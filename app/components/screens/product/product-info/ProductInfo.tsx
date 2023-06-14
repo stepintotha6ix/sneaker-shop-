@@ -1,25 +1,33 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { IProductDetails } from 'types/product.interface'
 import styles from './ProductInfo.module.scss'
 import { formatToCurrency } from '@/utils/format-to-currency'
-import MainButton from '@/components/ui/MainButton/MainButton'
+import AddToCartButton from '@/components/ui/AddToCartButton/AddToCartButton'
+import { TypeSize } from '@/store/cart/cart.types'
+import cn from 'clsx'
+const SIZES: TypeSize[] = [ 35 ,36, 37, 38, 39 , 40 , 41 , 42 , 43 , 44 , 45] 
+
 
 const ProductInfo: FC<IProductDetails> = ({ product }) => {
+	const [selectedSize, setSelectedSize] = useState<TypeSize>(41)
 	return (
 		<div className={styles.info}>
 			<h2>{product.name}</h2>
 			<h3>Articul: {product.code}</h3>
-			
+
 			<div className={styles.price}>{formatToCurrency(product.price)}</div>
 			<div className={styles.sizes}>
 				<h2>Select Size</h2>
-				<ul>
-					{product.sizes.map((size) => (
-						<li key={size}>UK {size}</li>
+				<div className={styles.block}>
+					{SIZES.map((size) => (
+						
+							<button key={size} 	className={cn({ [styles.active]: selectedSize === size })} onClick={() => setSelectedSize(size)}>{size}</button>
+						
 					))}
-				</ul>
+				</div>
 			</div>
-            <MainButton >Add to bag</MainButton>
+			<AddToCartButton product={product} selectedSize={selectedSize} />
+				
 		</div>
 	)
 }

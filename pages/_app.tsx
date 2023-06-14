@@ -1,12 +1,17 @@
-
 import type { AppProps } from 'next/app'
 import '../app/assets/styles/globals.scss'
 import MainProvider from '@/providers/MainProvider'
+import { Provider } from 'react-redux'
+import { store } from '@/store/store'
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<MainProvider>
-			<Component {...pageProps} />
-		</MainProvider>
+		<Provider store={store}>
+		
+				<MainProvider>
+					<Component {...pageProps} />
+				</MainProvider>
+			
+		</Provider>
 	)
 }

@@ -3,6 +3,7 @@ import styles from './Navigation.module.scss'
 import Logo from './Logo'
 import MenuContainer from './MenuContainer/MenuContainer'
 import MainButton from '../../ui/MainButton/MainButton'
+import Cart from './Cart'
 
 const Navigation: FC = () => {
 	return (
@@ -10,6 +11,7 @@ const Navigation: FC = () => {
 			<Logo />
 			<MenuContainer />
 			<MainButton>Log in</MainButton>
+			<Cart/>
 		</div>
 	)
 }

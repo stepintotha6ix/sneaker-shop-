@@ -15,11 +15,14 @@
 		> h2 {
 			@apply mb-4;
 		}
-		> ul {
+		.block {
 			@apply grid gap-2 grid-cols-3;
-			> li {
+			> button {
 				@apply flex justify-center items-center text-xl h-12 border-2 border-[#e5e5e5] rounded cursor-pointer;
 				&:hover {
+					@apply border-main;
+				}
+				&.active{
 					@apply border-main;
 				}
 			}

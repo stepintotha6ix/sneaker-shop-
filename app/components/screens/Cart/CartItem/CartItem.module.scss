@@ -1,0 +1,26 @@
+.item {
+	border-bottom: solid 1px rgb(229, 229, 229) ;
+
+	@apply flex mr-8 my-8 pb-6;
+	> img {
+		@apply mr-8;
+	}
+	.block {
+        
+      
+		.mainInfo {
+			@apply flex ;
+            
+			.name {
+				@apply text-xl mr-64;
+			}
+			.price {
+				@apply text-lg;
+			}
+		}
+		.secondInfo {
+			color: rgb(117, 117, 117);
+            
+		}
+	}
+}

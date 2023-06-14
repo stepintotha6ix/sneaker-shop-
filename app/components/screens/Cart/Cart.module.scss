@@ -1,0 +1,16 @@
+.block {
+    max-width: 1100px;
+    margin: 0 auto;
+	@apply flex place-content-stretch  mt-12  justify-between ;
+	.cart {
+		> h1 {
+			@apply text-2xl font-medium ;
+		}
+	}
+	.summary {
+        @apply w-96;
+		> h1 {
+			@apply text-2xl font-medium mb-8;
+		}
+	}
+}
